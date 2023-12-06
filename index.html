@@ -13,63 +13,76 @@
     />
 
     <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="container">
-      <header class="header">
+    <header class="header">
+      <div class="container">
         <h1><img src="./images/logo.svg" alt="Logo" class="logo" /></h1>
-      </header>
-      <main class="main">
-        <div class="main__bill">
-          <section class="bill">
-            <h2 class="bill__title">Bill</h2>
+      </div>
+    </header>
+    <main class="main">
+      <div class="main__bill">
+        <section class="bill">
+          <h2 class="bill__title">Bill</h2>
+          <div class="input__holder">
+            <img src="./images/icon-dollar.svg" alt="dollar" />
             <input
               type="text"
               class="input"
               id="bill-amount"
               placeholder="$0.00"
             />
-          </section>
-          <section class="tip">
-            <h2 class="tip__title">Select tip %</h2>
-            <div class="tip__options">
-              <button class="btn btn-primary" id="btn-5">5%</button>
-              <button class="btn btn-primary" id="btn-10">10%</button>
-              <button class="btn btn-primary" id="btn-15">15%</button>
-              <button class="btn btn-primary" id="btn-20">20%</button>
-              <button class="btn btn-primary" id="btn-25">25%</button>
-              <button class="btn btn-primary" id="btn-50">50%</button>
-              <button class="btn btn-primary" id="btn-custom">Custom</button>
-            </div>
-          </section>
-          <section class="people">
+          </div>
+        </section>
+        <section class="tip__selection">
+          <h2 class="tip__title">Select tip %</h2>
+          <div class="tip__options">
+            <button class="btn btn-primary" id="btn-5">5%</button>
+            <button class="btn btn-primary" id="btn-10">10%</button>
+            <button class="btn btn-primary" id="btn-15">15%</button>
+            <button class="btn btn-primary" id="btn-25">25%</button>
+            <button class="btn btn-primary" id="btn-50">50%</button>
+            <input
+              class="btn btn-primary"
+              id="btn-custom"
+              placeholder="Custom"
+            />
+          </div>
+        </section>
+        <section class="people">
+          <div class="people__title-section">
             <h1 class="people__title">Number of People</h1>
+            <h1 class="error">Can't be zero</h1>
+          </div>
+          <div class="input__holder">
+            <img src="./images/icon-person.svg" alt="Person" />
             <input
               type="text"
               class="input"
               id="number-of-people"
               placeholder="$ 0.00"
             />
-          </section>
-        </div>
-        <div class="tip__bill">
-          <div class="tip">
-            <div class="tip__title-section">
-              <h2 class="tip__title">Tip Amount</h2>
-              <small class="per__perso">/ person</small>
-            </div>
-            <h2 class="tip__amount">$4.27</h2>
           </div>
-          <div class="tip">
-            <div class="tip__title-section">
-              <h2 class="tip__title">Total</h2>
-              <small class="per__person">/ person</small>
-            </div>
-            <h2 class="tip__amount">$32.79</h2>
+        </section>
+      </div>
+      <div class="tip__bill">
+        <div class="tip">
+          <div class="tip__title-section">
+            <h2 class="tips__title">Tip Amount</h2>
+            <small class="per__person">/ person</small>
           </div>
-          <button class="btn btn-active">RESET</button>
+          <h2 class="tips__amount">$0.00</h2>
         </div>
-      </main>
-    </div>
+        <div class="tip">
+          <div class="tip__title-section">
+            <h2 class="tips__title">Total</h2>
+            <small class="per__person">/ person</small>
+          </div>
+          <h2 class="tips__amount">$0.00</h2>
+        </div>
+        <button class="btn btn-active">RESET</button>
+      </div>
+    </main>
   </body>
 </html>
