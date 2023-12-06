@@ -101,7 +101,7 @@ const displayTip = () => {
   calcTotal();
 };
 
-numPeopleField.addEventListener("change", () => {
+numPeopleField.addEventListener("input", () => {
   displayTip();
 });
 
