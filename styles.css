@@ -64,6 +64,7 @@ svg {
   color: var(--clr-primary-variant);
   margin: 3rem 0 1rem 0;
 }
+.bill__title-section,
 .people__title-section {
   display: flex;
   justify-content: space-between;
@@ -94,11 +95,13 @@ svg {
   text-align: right;
   font-weight: 700;
 }
+
 .error {
   color: var(--clr-error);
   display: none;
   margin: 0;
 }
+
 .tip__options {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -118,6 +121,7 @@ svg {
   text-align: center;
   width: 100%;
 }
+
 .tip__bill {
   background-color: var(--clr-primary);
   padding: 2rem;
@@ -157,6 +161,10 @@ svg {
   border: 0.2rem solid var(--clr-error);
   display: block;
 }
+.btn.active {
+  background-color: var(--clr-secondary);
+  color: var(--clr-primary);
+}
 .btn:hover,
 .btn:active {
   background-color: var(--clr-secondary);
@@ -167,8 +175,12 @@ svg {
   background-color: var(--clr-background);
   color: var(--clr-primary);
 }
+#btn-custom {
+  background-color: var(--clr-background);
+}
 #btn-custom::placeholder {
-  color: var(--clr-white);
+  color: var(--clr-primary);
+  font-weight: 700;
 }
 #btn-custom:hover,
 #btn-custom:active,

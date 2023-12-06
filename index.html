@@ -24,7 +24,10 @@
     <main class="main">
       <div class="main__bill">
         <section class="bill">
-          <h2 class="bill__title">Bill</h2>
+          <div class="bill__title-section">
+            <h2 class="bill__title">Bill</h2>
+            <h1 class="error" id="bill-error">Can't be zero</h1>
+          </div>
           <div class="input__holder">
             <img src="./images/icon-dollar.svg" alt="dollar" />
             <input
@@ -32,17 +35,22 @@
               class="input"
               id="bill-amount"
               placeholder="$0.00"
+              name="bill-amount"
             />
           </div>
         </section>
         <section class="tip__selection">
           <h2 class="tip__title">Select tip %</h2>
           <div class="tip__options">
-            <button class="btn btn-primary" id="btn-5">5%</button>
-            <button class="btn btn-primary" id="btn-10">10%</button>
-            <button class="btn btn-primary" id="btn-15">15%</button>
-            <button class="btn btn-primary" id="btn-25">25%</button>
-            <button class="btn btn-primary" id="btn-50">50%</button>
+            <button class="btn btn-primary" id="btn-5" value="0.05">5%</button>
+            <button class="btn btn-primary" id="btn-10" value="0.1">10%</button>
+            <button class="btn btn-primary" id="btn-15" value="0.15">
+              15%
+            </button>
+            <button class="btn btn-primary" id="btn-25" value="0.25">
+              25%
+            </button>
+            <button class="btn btn-primary" id="btn-50" value="0.5">50%</button>
             <input
               class="btn btn-primary"
               id="btn-custom"
@@ -53,7 +61,7 @@
         <section class="people">
           <div class="people__title-section">
             <h1 class="people__title">Number of People</h1>
-            <h1 class="error">Can't be zero</h1>
+            <h1 class="error" id="people-error">Can't be zero</h1>
           </div>
           <div class="input__holder">
             <img src="./images/icon-person.svg" alt="Person" />
@@ -72,17 +80,18 @@
             <h2 class="tips__title">Tip Amount</h2>
             <small class="per__person">/ person</small>
           </div>
-          <h2 class="tips__amount">$0.00</h2>
+          <h2 class="tips__amount" id="tip-single">$0.00</h2>
         </div>
         <div class="tip">
           <div class="tip__title-section">
             <h2 class="tips__title">Total</h2>
             <small class="per__person">/ person</small>
           </div>
-          <h2 class="tips__amount">$0.00</h2>
+          <h2 class="tips__amount" id="tip-all">$0.00</h2>
         </div>
-        <button class="btn btn-active">RESET</button>
+        <button class="btn btn-active" id="btn-reset">RESET</button>
       </div>
     </main>
+    <script src="./scripts.js"></script>
   </body>
 </html>
