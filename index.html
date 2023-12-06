@@ -1,44 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1><img src="./images/logo.svg" alt="Logo" class="logo" /></h1>
+      </header>
+      <main class="main">
+        <div class="main__bill">
+          <section class="bill">
+            <h2 class="bill__title">Bill</h2>
+            <input
+              type="text"
+              class="input"
+              id="bill-amount"
+              placeholder="$0.00"
+            />
+          </section>
+          <section class="tip">
+            <h2 class="tip__title">Select tip %</h2>
+            <div class="tip__options">
+              <button class="btn btn-primary" id="btn-5">5%</button>
+              <button class="btn btn-primary" id="btn-10">10%</button>
+              <button class="btn btn-primary" id="btn-15">15%</button>
+              <button class="btn btn-primary" id="btn-20">20%</button>
+              <button class="btn btn-primary" id="btn-25">25%</button>
+              <button class="btn btn-primary" id="btn-50">50%</button>
+              <button class="btn btn-primary" id="btn-custom">Custom</button>
+            </div>
+          </section>
+          <section class="people">
+            <h1 class="people__title">Number of People</h1>
+            <input
+              type="text"
+              class="input"
+              id="number-of-people"
+              placeholder="$ 0.00"
+            />
+          </section>
+        </div>
+        <div class="tip__bill">
+          <div class="tip">
+            <div class="tip__title-section">
+              <h2 class="tip__title">Tip Amount</h2>
+              <small class="per__perso">/ person</small>
+            </div>
+            <h2 class="tip__amount">$4.27</h2>
+          </div>
+          <div class="tip">
+            <div class="tip__title-section">
+              <h2 class="tip__title">Total</h2>
+              <small class="per__person">/ person</small>
+            </div>
+            <h2 class="tip__amount">$32.79</h2>
+          </div>
+          <button class="btn btn-active">RESET</button>
+        </div>
+      </main>
+    </div>
+  </body>
 </html>
