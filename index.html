@@ -1,97 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-
-    <title>Frontend Mentor | Tip calculator app</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <script src="./assets/js/script.js" defer></script>
   </head>
-  <body>
-    <header class="header">
-      <div class="container">
-        <h1><img src="./images/logo.svg" alt="Logo" class="logo" /></h1>
-      </div>
-    </header>
-    <main class="main">
-      <div class="main__bill">
-        <section class="bill">
-          <div class="bill__title-section">
-            <h2 class="bill__title">Bill</h2>
-            <h2 class="error" id="bill-error">Can't be zero</h2>
-          </div>
-          <div class="input__holder">
-            <img src="./images/icon-dollar.svg" alt="dollar" />
-            <input
-              type="text"
-              class="input"
-              id="bill-amount"
-              placeholder="$0.00"
-              name="bill-amount"
-            />
-          </div>
-        </section>
-        <section class="tip__selection">
-          <h2 class="tip__title">Select tip %</h2>
-          <div class="tip__options">
-            <button class="btn btn-primary" id="btn-5" value="0.05">5%</button>
-            <button class="btn btn-primary" id="btn-10" value="0.1">10%</button>
-            <button class="btn btn-primary" id="btn-15" value="0.15">
-              15%
-            </button>
-            <button class="btn btn-primary" id="btn-25" value="0.25">
-              25%
-            </button>
-            <button class="btn btn-primary" id="btn-50" value="0.5">50%</button>
-            <input
-              class="btn btn-primary"
-              id="btn-custom"
-              placeholder="Custom"
-            />
-          </div>
-        </section>
-        <section class="people">
-          <div class="people__title-section">
-            <h2 class="people__title">Number of People</h2>
-            <h2 class="error" id="people-error">Can't be zero</h2>
-          </div>
-          <div class="input__holder">
-            <img src="./images/icon-person.svg" alt="Person" />
-            <input
-              type="text"
-              class="input"
-              id="number-of-people"
-              placeholder="$ 0.00"
-            />
-          </div>
-        </section>
-      </div>
-      <div class="tip__bill">
-        <div class="tip">
-          <div class="tip__title-section">
-            <h2 class="tips__title">Tip Amount</h2>
-            <small class="per__person">/ person</small>
-          </div>
-          <h2 class="tips__amount" id="tip-single">$0.00</h2>
-        </div>
-        <div class="tip">
-          <div class="tip__title-section">
-            <h2 class="tips__title">Total</h2>
-            <small class="per__person">/ person</small>
-          </div>
-          <h2 class="tips__amount" id="tip-all">$0.00</h2>
-        </div>
-        <button class="btn btn-active" id="btn-reset">RESET</button>
-      </div>
-    </main>
-    <script src="./scripts.js"></script>
-  </body>
+  <body></body>
 </html>
