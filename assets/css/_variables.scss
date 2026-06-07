@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+:root {
+  // colors
+  --color-text-main: hsl(183, 100%, 15%);
+  --color-text-muted: hsl(186, 14%, 43%);
+
+  --color-button: hsl(172, 67%, 45%);
+  --color-button-hover: hsl(184, 14%, 56%);
+  --color-button-bg: hsla(184, 14%, 56%, 0.15);
+
+  --color-bg: hsl(185, 41%, 84%);
+  --color-bg-card: hsl(189, 41%, 97%);
+  --color-white: hsl(0, 0%, 100%);
+
+  --color-error: rgb(173, 113, 0);
+
+  //   typography
+  --font-family: "Space Mono", sans-serif;
+
+  --fw-bold: 700;
+  --fw-medium: 500;
+  --fw-regular: 400;
+
+  --lh-1: 7.1rem;
+  --lh-2: 4.7rem;
+  --lh-3: 3.6rem;
+  --lh-4: 3rem;
+  --lh-5: 2.4rem;
+  --lh-6: 1.9rem;
+
+  --fs-1: 4.8rem;
+  --fs-2: 3.2rem;
+  --fs-3: 2.4rem;
+  --fs-4: 2rem;
+  --fs-5: 1.6rem;
+  --fs-6: 1.3rem;
+
+  --ls-1: -1px;
+  --ls-2: -0.67px;
+  --ls-3: 0;
+
+  //   spacing
+  --spacing-0: 0;
+  --spacing-8: 0.8rem;
+  --spacing-16: 1.6rem;
+  --spacing-24: 2.4rem;
+  --spacing-32: 3.2rem;
+  --spacing-40: 4rem;
+  --spacing-48: 4.8rem;
+  --spacing-80: 8rem;
+  --spacing-128: 12.8rem;
+}

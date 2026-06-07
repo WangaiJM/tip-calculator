@@ -1,0 +1,336 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+:root {
+  --color-text-main: hsl(183, 100%, 15%);
+  --color-text-muted: hsl(186, 14%, 43%);
+  --color-button: hsl(172, 67%, 45%);
+  --color-button-hover: hsl(184, 14%, 56%);
+  --color-button-bg: hsla(184, 14%, 56%, 0.15);
+  --color-bg: hsl(185, 41%, 84%);
+  --color-bg-card: hsl(189, 41%, 97%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-error: rgb(173, 113, 0);
+  --font-family: "Space Mono", sans-serif;
+  --fw-bold: 700;
+  --fw-medium: 500;
+  --fw-regular: 400;
+  --lh-1: 7.1rem;
+  --lh-2: 4.7rem;
+  --lh-3: 3.6rem;
+  --lh-4: 3rem;
+  --lh-5: 2.4rem;
+  --lh-6: 1.9rem;
+  --fs-1: 4.8rem;
+  --fs-2: 3.2rem;
+  --fs-3: 2.4rem;
+  --fs-4: 2rem;
+  --fs-5: 1.6rem;
+  --fs-6: 1.3rem;
+  --ls-1: -1px;
+  --ls-2: -0.67px;
+  --ls-3: 0;
+  --spacing-0: 0;
+  --spacing-8: 0.8rem;
+  --spacing-16: 1.6rem;
+  --spacing-24: 2.4rem;
+  --spacing-32: 3.2rem;
+  --spacing-40: 4rem;
+  --spacing-48: 4.8rem;
+  --spacing-80: 8rem;
+  --spacing-128: 12.8rem;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--fs-5);
+  min-height: 100vh;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+input,
+button {
+  appearance: none;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  background-color: var(--color-bg);
+}
+body header h1 {
+  margin-block: 5rem;
+}
+@media (min-width: 68.75rem) {
+  body header h1 {
+    margin-block: 0;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-32);
+  padding: var(--spacing-32);
+  background-color: var(--color-bg-card);
+  border-radius: 2.5rem;
+}
+@media (min-width: 68.75rem) {
+  .container {
+    gap: var(--spacing-40);
+    padding: var(--spacing-48);
+  }
+}
+@media (min-width: 40rem) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    padding: var(--spacing-32);
+    gap: var(--spacing-48);
+  }
+}
+.container .bill-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-40);
+  flex: 1;
+}
+@media (min-width: 68.75rem) {
+  .container .bill-section {
+    gap: var(--spacing-24);
+  }
+}
+@media (min-width: 40rem) {
+  .container .bill-section {
+    gap: var(--spacing-32);
+  }
+}
+.container .bill-section .bill-input-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+}
+.container .bill-section .bill-input-section-title h2 {
+  font-size: var(--fs-5);
+  line-height: var(--lh-5);
+  letter-spacing: var(--ls-3);
+  color: var(--color-text-muted);
+}
+.container .bill-section .bill-input-section .bill-input {
+  position: relative;
+}
+.container .bill-section .bill-input-section .bill-input::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 0.4rem;
+  left: 0;
+  background: url(./../images/icon-dollar.svg);
+  width: 10%;
+  height: 70%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.container .bill-section .bill-input-section .bill-input input {
+  padding: 0.6rem 1.8rem;
+  text-align: right;
+  font-size: var(--fs-3);
+  line-height: var(--lh-3);
+  letter-spacing: var(--ls-3);
+  border: none;
+  background-color: var(--color-bg);
+  border-radius: 0.5rem;
+}
+.container .bill-section .bill-input-section .bill-input input::placeholder {
+  color: var(--color-text-muted);
+}
+.container .tip-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+}
+.container .tip-section-title h2 {
+  font-size: var(--fs-5);
+  line-height: var(--lh-5);
+  letter-spacing: var(--ls-3);
+  color: var(--color-text-muted);
+}
+.container .tip-section .tip {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-16);
+}
+@media (min-width: 40rem) {
+  .container .tip-section .tip {
+    grid-template-columns: repeat(3, 10rem);
+  }
+}
+.container .tip-section .tip .btn {
+  padding: var(--spacing-8) var(--spacing-16);
+  border-radius: 0.5rem;
+  font-size: var(--fs-3);
+  line-height: var(--lh-3);
+  letter-spacing: var(--ls-3);
+  background-color: var(--color-text-main);
+  color: var(--color-white);
+  font-weight: var(--fw-bold);
+  cursor: pointer;
+  border: none;
+}
+.container .tip-section .tip .btn:hover {
+  background-color: var(--color-button);
+  color: var(--color-text-main);
+}
+.container .tip-section .tip .btn:active {
+  background-color: var(--color-bg);
+}
+.container .tip-section .tip .tip-input input {
+  width: 100%;
+  font-size: var(--fs-3);
+  line-height: var(--lh-3);
+  letter-spacing: var(--ls-3);
+  text-align: right;
+  border: none;
+  background-color: var(--color-bg);
+  font-weight: var(--fw-bold);
+  padding: var(--spacing-8) var(--spacing-16);
+  color: var(--color-text-main);
+}
+.container .people-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+}
+.container .people-section-title h2 {
+  font-size: var(--fs-5);
+  line-height: var(--lh-5);
+  letter-spacing: var(--ls-3);
+  color: var(--color-text-muted);
+}
+.container .people-section .people-input {
+  position: relative;
+}
+.container .people-section .people-input::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 0.4rem;
+  left: 0;
+  background: url(./../images/icon-person.svg);
+  width: 10%;
+  height: 70%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.container .people-section .people-input input {
+  padding: 0.6rem 1.8rem;
+  text-align: right;
+  font-size: var(--fs-3);
+  line-height: var(--lh-3);
+  letter-spacing: var(--ls-3);
+  border: none;
+  background-color: var(--color-bg);
+  border-radius: 0.5rem;
+}
+.container .people-section .people-input input::placeholder {
+  color: var(--color-text-muted);
+}
+.container .result-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--color-text-main);
+  padding: var(--spacing-24) var(--spacing-32);
+  border-radius: 2.5rem;
+}
+.container .result-section .amount-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-24);
+}
+@media (min-width: 68.75rem) {
+  .container .result-section .amount-container {
+    gap: var(--spacing-8);
+  }
+}
+@media (min-width: 40rem) {
+  .container .result-section .amount-container {
+    gap: var(--spacing-24);
+  }
+}
+.container .result-section .tip-amount-container,
+.container .result-section .total-amount-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .result-section .tip-amount-container .amount-label h2,
+.container .result-section .total-amount-container .amount-label h2 {
+  color: var(--color-white);
+  font-size: var(--fs-5);
+  line-height: var(--lh-5);
+  letter-spacing: var(--ls-3);
+}
+.container .result-section .tip-amount-container .amount-label p,
+.container .result-section .total-amount-container .amount-label p {
+  color: var(--color-button-hover);
+  font-size: var(--fs-6);
+  line-height: var(--lh-6);
+  letter-spacing: var(--ls-3);
+}
+.container .result-section .tip-amount-container .amount,
+.container .result-section .total-amount-container .amount {
+  font-size: var(--fs-3);
+  line-height: var(--lh-3);
+  letter-spacing: var(--ls-3);
+  color: var(--color-button);
+  font-weight: var(--fw-bold);
+}
+@media (min-width: 40rem) {
+  .container .result-section .tip-amount-container .amount,
+  .container .result-section .total-amount-container .amount {
+    font-size: var(--fs-1);
+    line-height: var(--lh-1);
+    letter-spacing: var(--ls-1);
+  }
+}
+.container .result-section .reset-container {
+  display: flex;
+}
+.container .result-section .reset-container .reset {
+  flex: 1;
+  padding: var(--spacing-8) var(--spacing-40);
+  border: none;
+  border-radius: 0.5rem;
+  background-color: var(--color-button);
+  color: var(--color-text-main);
+  font-size: var(--fs-4);
+  line-height: var(--lh-4);
+  letter-spacing: var(--ls-3);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.container .result-section .reset-container .reset:hover {
+  background-color: var(--color-bg);
+}
+
+/*# sourceMappingURL=index.css.map */

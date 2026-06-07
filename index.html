@@ -36,7 +36,14 @@
             <button class="btn" value="15" name="15" type="button">15%</button>
             <button class="btn" value="25" name="25" type="button">25%</button>
             <button class="btn" value="50" name="50" type="button">50%</button>
-            <input type="text" name="custom" id="custom" placeholder="Custom" />
+            <div class="tip-input">
+              <input
+                type="text"
+                name="custom"
+                id="custom"
+                placeholder="Custom"
+              />
+            </div>
           </div>
         </article>
         <article class="people-section">
@@ -51,26 +58,26 @@
       <section class="result-section">
         <article class="amount-container">
           <div class="tip-amount-container">
-            <div class="tip-amount-label">
+            <div class="amount-label">
               <h2>Tip Amount</h2>
               <p>/Person</p>
             </div>
-            <div class="tip-amount">
+            <div class="amount">
               <p>$4.05</p>
             </div>
           </div>
           <div class="total-amount-container">
-            <div class="total-amount-label">
+            <div class="amount-label">
               <h2>Total Amount</h2>
               <p>/Person</p>
             </div>
-            <div class="total-amount">
+            <div class="amount">
               <p>$104.05</p>
             </div>
           </div>
         </article>
         <article class="reset-container">
-          <button type="reset">Reset</button>
+          <button type="reset" class="reset">Reset</button>
         </article>
       </section>
     </main>
