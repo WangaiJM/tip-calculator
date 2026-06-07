@@ -3,9 +3,76 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon-32x32.png"
+      type="image/x-icon"
+    />
     <title>Tip Calculator</title>
     <link rel="stylesheet" href="./assets/css/index.css" />
     <script src="./assets/js/script.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1><img src="./assets/images/logo.svg" alt="Logo Image" /></h1>
+    </header>
+    <main class="container">
+      <section class="bill-section">
+        <article class="bill-input-section">
+          <div class="bill-input-section-title">
+            <h2>Bill</h2>
+          </div>
+          <div class="bill-input">
+            <input type="text" name="bill" id="bill" placeholder="0" />
+          </div>
+        </article>
+        <article class="tip-section">
+          <div class="tip-section-title">
+            <h2>Select Tip %</h2>
+          </div>
+          <div class="tip">
+            <button class="btn" value="5" name="5" type="button">5%</button>
+            <button class="btn" value="10" name="10" type="button">10%</button>
+            <button class="btn" value="15" name="15" type="button">15%</button>
+            <button class="btn" value="25" name="25" type="button">25%</button>
+            <button class="btn" value="50" name="50" type="button">50%</button>
+            <input type="text" name="custom" id="custom" placeholder="Custom" />
+          </div>
+        </article>
+        <article class="people-section">
+          <div class="people-section-title">
+            <h2>Number of People</h2>
+          </div>
+          <div class="people-input">
+            <input type="text" name="people" id="people" placeholder="0" />
+          </div>
+        </article>
+      </section>
+      <section class="result-section">
+        <article class="amount-container">
+          <div class="tip-amount-container">
+            <div class="tip-amount-label">
+              <h2>Tip Amount</h2>
+              <p>/Person</p>
+            </div>
+            <div class="tip-amount">
+              <p>$4.05</p>
+            </div>
+          </div>
+          <div class="total-amount-container">
+            <div class="total-amount-label">
+              <h2>Total Amount</h2>
+              <p>/Person</p>
+            </div>
+            <div class="total-amount">
+              <p>$104.05</p>
+            </div>
+          </div>
+        </article>
+        <article class="reset-container">
+          <button type="reset">Reset</button>
+        </article>
+      </section>
+    </main>
+  </body>
 </html>
