@@ -57,6 +57,13 @@ body {
       .bill-input {
         position: relative;
 
+        #bill-error {
+          position: absolute;
+          right: 1.6rem;
+          top: -2.4rem;
+          color: var(--color-error);
+        }
+
         &::before {
           position: absolute;
           content: "";
@@ -126,6 +133,15 @@ body {
       }
 
       .tip-input {
+        position: relative;
+
+        #custom-error {
+          position: absolute;
+          right: 1.6rem;
+          top: -2.4rem;
+          color: var(--color-error);
+        }
+
         input {
           width: 100%;
           @include text-preset-3;
@@ -135,6 +151,11 @@ body {
           font-weight: var(--fw-bold);
           padding: var(--spacing-8) var(--spacing-16);
           color: var(--color-text-main);
+          position: relative;
+
+          &.error {
+            border: 1px solid var(--color-error);
+          }
         }
       }
     }
@@ -152,6 +173,13 @@ body {
     }
     .people-input {
       position: relative;
+
+      #people-error {
+        position: absolute;
+        right: 1.6rem;
+        top: -2.4rem;
+        color: var(--color-error);
+      }
 
       &::before {
         position: absolute;

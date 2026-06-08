@@ -24,6 +24,7 @@
           </div>
           <div class="bill-input">
             <input type="text" name="bill" id="bill" placeholder="0" />
+            <span id="bill-error"></span>
           </div>
         </article>
         <article class="tip-section">
@@ -31,11 +32,19 @@
             <h2>Select Tip %</h2>
           </div>
           <div class="tip">
-            <button class="btn" value="5" name="5" type="button">5%</button>
-            <button class="btn" value="10" name="10" type="button">10%</button>
-            <button class="btn" value="15" name="15" type="button">15%</button>
-            <button class="btn" value="25" name="25" type="button">25%</button>
-            <button class="btn" value="50" name="50" type="button">50%</button>
+            <button class="btn" data-tip="5" name="5" type="button">5%</button>
+            <button class="btn" data-tip="10" name="10" type="button">
+              10%
+            </button>
+            <button class="btn" data-tip="15" name="15" type="button">
+              15%
+            </button>
+            <button class="btn" data-tip="25" name="25" type="button">
+              25%
+            </button>
+            <button class="btn" data-tip="50" name="50" type="button">
+              50%
+            </button>
             <div class="tip-input">
               <input
                 type="text"
@@ -43,6 +52,7 @@
                 id="custom"
                 placeholder="Custom"
               />
+              <span id="custom-error"></span>
             </div>
           </div>
         </article>
@@ -52,6 +62,7 @@
           </div>
           <div class="people-input">
             <input type="text" name="people" id="people" placeholder="0" />
+            <span id="people-error"></span>
           </div>
         </article>
       </section>
@@ -63,7 +74,7 @@
               <p>/Person</p>
             </div>
             <div class="amount">
-              <p>$4.05</p>
+              <p id="tip-amount">0</p>
             </div>
           </div>
           <div class="total-amount-container">
@@ -72,12 +83,12 @@
               <p>/Person</p>
             </div>
             <div class="amount">
-              <p>$104.05</p>
+              <p id="total-amount">0</p>
             </div>
           </div>
         </article>
         <article class="reset-container">
-          <button type="reset" class="reset">Reset</button>
+          <button type="reset" class="reset" id="reset">Reset</button>
         </article>
       </section>
     </main>

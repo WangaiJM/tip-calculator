@@ -134,6 +134,12 @@ body header h1 {
 .container .bill-section .bill-input-section .bill-input {
   position: relative;
 }
+.container .bill-section .bill-input-section .bill-input #bill-error {
+  position: absolute;
+  right: 1.6rem;
+  top: -2.4rem;
+  color: var(--color-error);
+}
 .container .bill-section .bill-input-section .bill-input::before {
   position: absolute;
   content: "";
@@ -200,6 +206,15 @@ body header h1 {
 .container .tip-section .tip .btn:active {
   background-color: var(--color-bg);
 }
+.container .tip-section .tip .tip-input {
+  position: relative;
+}
+.container .tip-section .tip .tip-input #custom-error {
+  position: absolute;
+  right: 1.6rem;
+  top: -2.4rem;
+  color: var(--color-error);
+}
 .container .tip-section .tip .tip-input input {
   width: 100%;
   font-size: var(--fs-3);
@@ -211,6 +226,10 @@ body header h1 {
   font-weight: var(--fw-bold);
   padding: var(--spacing-8) var(--spacing-16);
   color: var(--color-text-main);
+  position: relative;
+}
+.container .tip-section .tip .tip-input input.error {
+  border: 1px solid var(--color-error);
 }
 .container .people-section {
   display: flex;
@@ -225,6 +244,12 @@ body header h1 {
 }
 .container .people-section .people-input {
   position: relative;
+}
+.container .people-section .people-input #people-error {
+  position: absolute;
+  right: 1.6rem;
+  top: -2.4rem;
+  color: var(--color-error);
 }
 .container .people-section .people-input::before {
   position: absolute;
